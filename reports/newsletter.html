@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Fabric Tech Watch</title>
+</head>
+
+<body style="margin:0; padding:24px; background:#f3f5f9;
+             font-family:Arial,sans-serif; color:#202938;">
+
+    <div style="max-width:680px; margin:auto;">
+
+        <div style="background:#182b50; color:white;
+                    padding:30px; border-radius:12px;">
+
+            <h1 style="margin:0;">Fabric Tech Watch</h1>
+
+            <p style="margin-bottom:0;">
+                Newsletter Microsoft Fabric — 25/10/2026
+            </p>
+        </div>
+
+        <p style="color:#566274; line-height:1.6;">
+            Les nouveautés techniques Microsoft Fabric
+            à retenir cette semaine.
+        </p>
+
+        
+
+        <div style="background:white; padding:24px;
+                    margin:20px 0; border-radius:12px;
+                    border:1px solid #e2e6ee;">
+
+            <h2 style="color:#182b50; margin-top:0;">
+                1. Advanced NL2SQL and advanced DAX generation in Fabric data agents (Generally Available)
+            </h2>
+
+            <p style="font-size:13px; color:#697586;">
+                Publié le 2026-10-19
+            </p>
+
+            <h3>Résumé</h3>
+            <p style="line-height:1.6;">
+                Microsoft Fabric introduit des agents de données capables de transformer des requêtes en langage naturel en SQL ou DAX en explorant d’abord le schéma et les données, ce qui améliore la précision des réponses. Les nouvelles fonctionnalités incluent la génération avancée de NL2SQL et de DAX, ainsi que des descriptions de schéma et des sujets pour fournir un contexte métier. Les tests internes montrent une hausse de l’exactitude des réponses et une réduction significative de la latence, notamment sur les requêtes complexes. Les améliorations seront déployées sur le runtime standard d’ici le 10 novembre, avec un passage à GPT‑5.6 Terra. Les ingénieurs devront réévaluer leurs agents pour tirer parti de ces nouvelles capacités et ajuster leurs instructions et exemples.
+            </p>
+
+            <h3>Nouveautés techniques</h3>
+
+            <ul style="line-height:1.7;">
+                
+                    <li>Génération avancée NL2SQL/DAX avec exploration préalable du schéma et des données</li>
+                
+                    <li>Descriptions de schéma et sujets pour enrichir le contexte métier</li>
+                
+            </ul>
+
+            <h3>Impact pour un Data Engineer</h3>
+            <p style="line-height:1.6;">
+                Les Data Engineers pourront concevoir des agents plus précis et rapides, réduire le besoin d’instructions détaillées, et améliorer la qualité des réponses aux requêtes métier complexes.
+            </p>
+
+            <p>
+                <strong>Pertinence :</strong>
+                8/10
+            </p>
+
+            <a href="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Advanced-NL2SQL-and-advanced-DAX-generation-in-Fabric-data/ba-p/5374654"
+               style="color:#2563eb; font-weight:bold;">
+                Lire l'article original
+            </a>
+
+        </div>
+
+        
+
+        <div style="background:white; padding:24px;
+                    margin:20px 0; border-radius:12px;
+                    border:1px solid #e2e6ee;">
+
+            <h2 style="color:#182b50; margin-top:0;">
+                2. T-SQL language enhancements in Microsoft Fabric Data Warehouse (Preview)
+            </h2>
+
+            <p style="font-size:13px; color:#697586;">
+                Publié le 2026-10-20
+            </p>
+
+            <h3>Résumé</h3>
+            <p style="line-height:1.6;">
+                Microsoft Fabric Data Warehouse introduit quatre extensions T‑SQL en aperçu : GROUP BY ALL, ORDER BY ALL, QUALIFY et FROM … SELECT. Ces syntaxes réduisent la duplication de code, simplifient la maintenance et clarifient l’intention analytique. Elles sont particulièrement utiles pour les requêtes avec de nombreux champs de regroupement ou de tri, ou lorsqu’on souhaite filtrer les résultats de fonctions de fenêtre sans sous‑requêtes supplémentaires.
+            </p>
+
+            <h3>Nouveautés techniques</h3>
+
+            <ul style="line-height:1.7;">
+                
+                    <li>GROUP BY ALL et ORDER BY ALL automatisent la gestion des colonnes de sélection</li>
+                
+                    <li>QUALIFY permet de filtrer après l’évaluation des fonctions de fenêtre</li>
+                
+                    <li>FROM … SELECT offre une structure source‑première pour les requêtes complexes</li>
+                
+            </ul>
+
+            <h3>Impact pour un Data Engineer</h3>
+            <p style="line-height:1.6;">
+                Un Data Engineer peut écrire des requêtes plus concises, modifier facilement les colonnes projetées sans réécrire les clauses GROUP BY ou ORDER BY, et filtrer les résultats de fonctions de fenêtre sans ajouter de couches de sous‑requêtes, ce qui accélère le développement et la maintenance des rapports analytiques.
+            </p>
+
+            <p>
+                <strong>Pertinence :</strong>
+                8/10
+            </p>
+
+            <a href="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/T-SQL-language-enhancements-in-Microsoft-Fabric-Data-Warehouse/ba-p/5375433"
+               style="color:#2563eb; font-weight:bold;">
+                Lire l'article original
+            </a>
+
+        </div>
+
+        
+
+        <div style="background:white; padding:24px;
+                    margin:20px 0; border-radius:12px;
+                    border:1px solid #e2e6ee;">
+
+            <h2 style="color:#182b50; margin-top:0;">
+                3. Incrementally migrate and re-migrate database objects with Migration Assistant for Fabric Warehouse (Preview)
+            </h2>
+
+            <p style="font-size:13px; color:#697586;">
+                Publié le 2026-10-21
+            </p>
+
+            <h3>Résumé</h3>
+            <p style="line-height:1.6;">
+                L&#39;article présente la Migration Assistant pour Fabric Warehouse (prévisualisation), permettant de migrer progressivement des objets de base de données vers Microsoft Fabric sans créer de nouveau Warehouse à chaque exécution. Il permet de sélectionner des objets par domaine métier, de gérer les conflits de nommage, de ré-migrer des objets modifiés et de consolider plusieurs sources dans un même Warehouse. Le processus migre uniquement les définitions d’objets, laissant la synchronisation des données à des jobs séparés.
+            </p>
+
+            <h3>Nouveautés techniques</h3>
+
+            <ul style="line-height:1.7;">
+                
+                    <li>Migration incrémentale des objets sans duplication de Warehouse</li>
+                
+                    <li>Gestion explicite des conflits de nommage et ré-migration des objets</li>
+                
+            </ul>
+
+            <h3>Impact pour un Data Engineer</h3>
+            <p style="line-height:1.6;">
+                Un Data Engineer peut planifier des migrations par étapes, réduire les risques de duplication, gérer les conflits de nommage et conserver le contrôle sur la consolidation des données, tout en séparant la migration des définitions de la charge de données.
+            </p>
+
+            <p>
+                <strong>Pertinence :</strong>
+                8/10
+            </p>
+
+            <a href="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Incrementally-migrate-and-re-migrate-database-objects-with/ba-p/5376060"
+               style="color:#2563eb; font-weight:bold;">
+                Lire l'article original
+            </a>
+
+        </div>
+
+        
+
+        <div style="background:white; padding:24px;
+                    margin:20px 0; border-radius:12px;
+                    border:1px solid #e2e6ee;">
+
+            <h2 style="color:#182b50; margin-top:0;">
+                4. From mixed events to real-time action: Fabric Eventstreams Q3 2026
+            </h2>
+
+            <p style="font-size:13px; color:#697586;">
+                Publié le 2026-10-20
+            </p>
+
+            <h3>Résumé</h3>
+            <p style="line-height:1.6;">
+                Fabric Eventstreams propose désormais des connecteurs gérés pour SAP Datasphere, Cribl, Solace PubSub+ et MQTT, ainsi qu’un connecteur personnalisé Kafka Connect. Il introduit un registre de schémas et des flux d’événements capables de gérer plusieurs types d’événements, et permet d’enrichir les flux en temps réel avec des données de référence Delta. De plus, des outils de surveillance et de diagnostic sont disponibles pour détecter et corriger rapidement les problèmes, tout en offrant une gestion sécurisée via Private Link et Variable Library.
+            </p>
+
+            <h3>Nouveautés techniques</h3>
+
+            <ul style="line-height:1.7;">
+                
+                    <li>Connecteurs gérés et connecteur Kafka Connect pour sources personnalisées</li>
+                
+                    <li>Registre de schémas et flux d’événements multi-types avec enrichissement en temps réel</li>
+                
+            </ul>
+
+            <h3>Impact pour un Data Engineer</h3>
+            <p style="line-height:1.6;">
+                Un Data Engineer peut désormais ingérer, transformer et enrichir les données en temps réel sans écrire de code de connecteur, surveiller la santé du pipeline et déployer des flux de données de manière sécurisée entre environnements, accélérant ainsi la mise en production d’applications réactives.
+            </p>
+
+            <p>
+                <strong>Pertinence :</strong>
+                8/10
+            </p>
+
+            <a href="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/From-mixed-events-to-real-time-action-Fabric-Eventstreams-Q3/ba-p/5375736"
+               style="color:#2563eb; font-weight:bold;">
+                Lire l'article original
+            </a>
+
+        </div>
+
+        
+
+        <div style="background:white; padding:24px;
+                    margin:20px 0; border-radius:12px;
+                    border:1px solid #e2e6ee;">
+
+            <h2 style="color:#182b50; margin-top:0;">
+                5. New analytical functions in Microsoft Fabric Data Warehouse (Preview)
+            </h2>
+
+            <p style="font-size:13px; color:#697586;">
+                Publié le 2026-10-20
+            </p>
+
+            <h3>Résumé</h3>
+            <p style="line-height:1.6;">
+                Microsoft Fabric Data Warehouse introduit de nouvelles fonctions analytiques en prévisualisation, permettant de calculer des médianes, quantiles et percentiles de façon concise. Les fonctions MEDIAN, QUANTILE, APPROX_MEDIAN et APPROX_QUANTILE offrent des calculs exacts ou approximés selon les besoins de précision ou de performance. Les fonctions PERCENTILE_CONT et PERCENTILE_DISC sont désormais disponibles en syntaxe agrégée, complétant leurs formes fenêtre. Ces ajouts simplifient les requêtes de distribution et permettent d’analyser directement les données dans l’entrepôt.
+            </p>
+
+            <h3>Nouveautés techniques</h3>
+
+            <ul style="line-height:1.7;">
+                
+                    <li>Nouvelles fonctions MEDIAN, QUANTILE, APPROX_MEDIAN, APPROX_QUANTILE</li>
+                
+                    <li>Ajout de la syntaxe agrégée pour PERCENTILE_CONT et PERCENTILE_DISC</li>
+                
+            </ul>
+
+            <h3>Impact pour un Data Engineer</h3>
+            <p style="line-height:1.6;">
+                Un Data Engineer peut désormais écrire des requêtes plus courtes et maintenables pour les analyses de distribution, choisir entre exactitude et rapidité, et garder l’analyse statistique proche des données sans recourir à des logiques personnalisées.
+            </p>
+
+            <p>
+                <strong>Pertinence :</strong>
+                8/10
+            </p>
+
+            <a href="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/New-analytical-functions-in-Microsoft-Fabric-Data-Warehouse/ba-p/5375432"
+               style="color:#2563eb; font-weight:bold;">
+                Lire l'article original
+            </a>
+
+        </div>
+
+        
+
+        
+
+        <p style="text-align:center; font-size:12px;
+                  color:#697586; margin-top:30px;">
+            Fabric Tech Watch — Généré automatiquement avec Python
+        </p>
+
+    </div>
+
+</body>
+</html>
