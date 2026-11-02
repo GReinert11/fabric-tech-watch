@@ -43,7 +43,11 @@ def generate_newsletter():
     # 4. Sélectionner les 5 articles les plus pertinents
     top_articles = sorted(
         recent_articles,
-        key=lambda article: article["score"],
+        key=lambda article: (
+            article["score"],
+            article["date"],
+            article["url"]
+        ),
         reverse=True
     )[:5]
 
