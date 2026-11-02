@@ -11,7 +11,7 @@ feed = feedparser.parse(url)
 articles = []
 
 # Récupérer que les 7 derniers jours 
-date_limit = datetime.now(timezone.utc) - timedelta(days=7)
+#date_limit = datetime.now(timezone.utc) - timedelta(days=7)
 
 
 for article in feed.entries:
@@ -36,8 +36,8 @@ for article in feed.entries:
         date_article = date_article.replace(tzinfo=timezone.utc)
 
     # Filtre sur les 7 derniers jours
-    if not date_limit <= date_article <= datetime.now(timezone.utc):
-        continue
+    # if not date_limit <= date_article <= datetime.now(timezone.utc):
+    #     continue
 
     article_dict = {
         "title": article.get("title", "Titre inconnu"),

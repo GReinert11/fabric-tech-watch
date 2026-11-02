@@ -18,6 +18,7 @@ def generate_newsletter():
 
     # 1. Récupérer les articles stockés
     articles = get_articles()
+    print(f"Articles en base : {len(articles)}")
 
     # 2. Filtrer les articles publiés ces 7 derniers jours
     today = datetime.now(timezone.utc).date()
@@ -28,6 +29,12 @@ def generate_newsletter():
         if article["date"]
         and date_limit.isoformat() <= article["date"] <= today.isoformat()
     ]
+
+    TEST_MODE = False
+
+    if TEST_MODE and not recent_articles:
+        print("Mode test : aucun article récent, utilisation des derniers articles disponibles.")
+        recent_articles = articles
 
     # 3. Calculer le score de chaque article
     for article in recent_articles:
@@ -58,6 +65,8 @@ def generate_newsletter():
 
         except Exception as error:
             print(f"Erreur sur cet article : {error}")
+
+    print(f"Articles résumés : {len(summarized_articles)}")
 
     # 6. Charger le template Jinja2
     env = Environment(
